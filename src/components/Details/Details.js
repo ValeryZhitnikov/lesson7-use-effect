@@ -15,7 +15,7 @@ export default function Details(props) {
     setLoading(true);
     setPerson(null);
     try {
-      const response = await fetch(`https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${info.id}.json`);
+      const response = await fetch(`${process.env.REACT_APP_LISTITEMS_URL}/${info.id}.json`);
       if (!response.ok) {
         throw new Error(response.statusText);
       } 

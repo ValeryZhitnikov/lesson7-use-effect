@@ -12,7 +12,7 @@ export default function List(props) {
 
 	const getListItems = async () => {
 		try {
-			const response = await fetch(process.env.REACT_APP_LISTITEMS_URL);
+			const response = await fetch(process.env.REACT_APP_LISTITEMS_URL + '/users.json');
 			
 			if (!response.ok) {
 				throw new Error(response.statusText);
